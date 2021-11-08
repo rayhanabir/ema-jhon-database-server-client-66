@@ -17,7 +17,7 @@ const OrderReview = () => {
         removeFromDb(key);
     }
 
-    const handlePlaceOrder = () => {
+    const handleProceedToOrder = () => {
         // setCart([]);
         // clearTheCart();
         history.push('/shipping');
@@ -36,7 +36,7 @@ const OrderReview = () => {
             </div>
             <div className="cart-container">
                 <Cart cart={cart}>
-                    <button onClick={handlePlaceOrder} className="btn-regular">Proceed to Shipping</button>
+                    <button onClick={handleProceedToOrder} className="btn-regular">Proceed to Shipping</button>
                 </Cart>
             </div>
         </div>
