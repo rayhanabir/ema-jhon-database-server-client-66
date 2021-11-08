@@ -21,7 +21,6 @@ const useFirebase=()=>{
     const logOut = () =>{
         signOut(auth)
         .then(()=>{
-           console.log('logout click');
            setUser({})
         })
         .catch(error=>{
@@ -31,11 +30,12 @@ const useFirebase=()=>{
 
     //observe user state change or not =>
     useEffect(()=>{
-        onAuthStateChanged (auth, (user)=>{
+       const unsubscribe = onAuthStateChanged (auth, (user)=>{
             if(user){
                setUser(user) ;
             }
         })
+        return unsubscribe;
 
     },[])
 
