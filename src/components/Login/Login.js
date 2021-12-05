@@ -30,7 +30,7 @@ const Login = () => {
                     <input type="submit" value="Submit" />
 
                 </form>
-                <p>New to ema-jhon ? <Link to="/register">Create Account</Link></p>
+                <p>New to ema-jhon website? <Link to="/register">Create Account</Link></p>
                 <div>--------or--------</div>
                 <button className="btn-regular"
                 onClick={handleGoogleSignIn}
